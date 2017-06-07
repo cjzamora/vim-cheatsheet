@@ -23,7 +23,7 @@ Below are the basic things to learn when playing around with vim.
 	- `v` - Switch to visual mode
 	- `v<w,e,b...>` - To select a word in visual mode and combine it with any commands.
 
-> __TIP__! Everything you do in vim (for the most part) follows this pattern: `[(n)um]<verb><n(o)un>` where most of the commands can accept number arguments to execute a command _nth_ times, for example: `3i<word>ESC` will insert the `word` 3 times on the current line.
+> __TIP__! Everything you do in vim (for the most part) follows this pattern: `[(n)um]<verb><n(o)un>` where most of the commands can accept number arguments to execute a command _nth_ times, for example: `3i<word>ESC` will insert the `word` 3 times on the current line, or if you wanted lines within range for example delete lines 1 to 3 we can just execute `:1,3d` then press ENTER, lines 1 to 3 will be deleted.
 
 ## Movements
 
@@ -57,6 +57,7 @@ Below are the basic things to learn when playing around with vim.
 	- `(` - Move to the beginning of the sentence.
 	- `)` - Move to the end of the sentence.
 	- `%` - Match the next brace, bracket, comment, #define
+	- `[n]G` - Move to _nth_ line.
 	- `gg` - Move to the top of the file.
 	- `GG` - Move to the bottom of the file.
 
@@ -105,6 +106,9 @@ Below are the basic things to learn when playing around with vim.
 
 - `r` - Replace character under cursor.
 - `R` - Replace characters starting at the cursor.
+- `:s/<search>/<word>` - Replace the first instance of `<search>` with `<word>` in the current line.
+- `:s/<search>/<word>` - Replace all the instances of `<search>` with `<word>` in the current line.
+- `:%s/<search>/<word>/g` - Replace all the instances of `<search>` with `<word>` in the whole file.
 
 ## Deleting
 
@@ -133,3 +137,15 @@ Below are the basic things to learn when playing around with vim.
 - `:[start,end]<command>` Indent from line _(start)_ to line _(end)_.
 
 > __TIP__! The indentation commands can be executed as follows `<command>[n]<i|a><tag>` this pattern will execute the indentation command `i` inside or `a` around the given tag. For example: `=2a{` will re-indent 2 blocks (1st and second `{` blocks) or `=a{` which re-indents a block (including the braces).
+
+## Registers
+
+- `"<char><command>` - Registers the `<command>` result to register `<char>`, Example `"ayw` will yank a word and save it to register `a`.
+- `^r<register>` - Will access the `<register>` while on insert mode.
+
+## Macros
+
+## Misc. Commands
+
+- `zz` - Center screen.
+- `ZZ` - Write and Quit. Only write if file has changed (preserves last mod time)
