@@ -39,12 +39,23 @@ Below are the basic things to learn when playing around with vim.
 	- `B` - Backward to the beginning of the next __WORD__.
 	- `e` - Forward to the next end of __word__.
 	- `E` - Forward to the next end of __WORD__.
+- __Screen__
+	- `H` - Move to the top of the screen.
+	- `L` - Move to the bottom of the screen.
+	- `M` - Move to the middle of the screen.
+	- `Ctrl+e` - Move the screen one line up.
+	- `Ctrl+y` - Move the screen one line down.
 - __Others__
 	- `0` - Move to the beginning of the line.
 	- `$` - Move to the end of the line.
-	- `^` - First non-blank character of the line.
+	- `^` - Moves to the first non-blank character at the beginning of the line.
+	- `g_` - Moves to the first non-blank character at the end of the line.
+	- `-` - Moves up to the first non-blank character.
+	- `+` - Moves down to the first non-blank character.
 	- `{` - Beginning of the previous paragraph.
 	- `}` - Beginning of the next paragraph.
+	- `(` - Move to the beginning of the sentence.
+	- `)` - Move to the end of the sentence.
 	- `%` - Match the next brace, bracket, comment, #define
 	- `gg` - Move to the top of the file.
 	- `GG` - Move to the bottom of the file.
@@ -103,6 +114,8 @@ Below are the basic things to learn when playing around with vim.
 - `X` - Remove a character, backward.
 - `s` - Delete character under cursor and enter insert mode.
 - `S` - Delete line and begin insert at the beginning of same line.
+- `ci<tags>` - Delete text "inside" __`{}[]()w<>t'"`__ and begin insert. Cursor should be within the tags/word.
+- `ca<tags>` - Delete text "aroud" including the closing tags __`{}[]()w<>t'"`__ and begin insert. Cursor should be within the tags/word.
 - `C` - Delete from cursor to end of line and begin insert.
 - `J` - Join the current line with the next line (with space).
 - `gJ` - Join the current line with the next line (without space).
@@ -110,3 +123,15 @@ Below are the basic things to learn when playing around with vim.
 ## Repeating
 
 - `.` - Repeat last changes.
+
+## Indentation
+
+- `>>` - Indent, forward.
+- `<<` - Indent, backward.
+- `[n]>>` - Indent _(nth)_ lines, forward.
+- `[n]<<` - Indent _(nth)_ lines, backward.
+- `:[start,end]>>` Indent from line _(start)_ to line _(end)_, forward.
+- `:[start,end]<<` Indent from line _(start)_ to line _(end)_, backward.
+- `==` - Re-indent.
+
+> __TIP__! The indentation commands can be executed as follows `<command>[n]<i|a><tag>` this pattern will execute the indentation command `i` inside or `a` around the given tag. For example: `=2a{` will re-indent 2 blocks (1st and second `{` blocks) or `=a{` which re-indents a block (including the braces).
