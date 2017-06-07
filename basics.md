@@ -128,10 +128,8 @@ Below are the basic things to learn when playing around with vim.
 
 - `>>` - Indent, forward.
 - `<<` - Indent, backward.
-- `[n]>>` - Indent _(nth)_ lines, forward.
-- `[n]<<` - Indent _(nth)_ lines, backward.
-- `:[start,end]>>` Indent from line _(start)_ to line _(end)_, forward.
-- `:[start,end]<<` Indent from line _(start)_ to line _(end)_, backward.
 - `==` - Re-indent.
+- `[n]<command>` - Indent _(nth)_ lines.
+- `:[start,end]<command>` Indent from line _(start)_ to line _(end)_.
 
 > __TIP__! The indentation commands can be executed as follows `<command>[n]<i|a><tag>` this pattern will execute the indentation command `i` inside or `a` around the given tag. For example: `=2a{` will re-indent 2 blocks (1st and second `{` blocks) or `=a{` which re-indents a block (including the braces).
