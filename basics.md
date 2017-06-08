@@ -15,13 +15,14 @@ Below are the basic things to learn when playing around with vim.
 	- `a` - Enter insert mode _after_ cursor.
 	- `A` - Enter insert mode at the end of the line.
 	- `o` - Enter insert mode on the next line.
-	- `o` - Enter insert mode on the above line.
+	- `O` - Enter insert mode on the above line.
 - __Normal Mode__
 	- `ESC` - Switch to Normal Mode.
 	- `Ctrl+[` - Switch to Normal Mode.
 - __Visual Mode__
-	- `v` - Switch to visual mode
+	- `v` - Switch to visual mode.
 	- `v<w,e,b...>` - To select a word in visual mode and combine it with any commands.
+	- `V` - Switch to visual block mode.
 
 > __TIP__! Everything you do in vim (for the most part) follows this pattern: `[(n)um]<verb><n(o)un>` where most of the commands can accept number arguments to execute a command _nth_ times, for example: `3i<word>ESC` will insert the `word` 3 times on the current line, or if you wanted lines within range for example delete lines 1 to 3 we can just execute `:1,3d` then press ENTER, lines 1 to 3 will be deleted.
 
