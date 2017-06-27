@@ -113,12 +113,14 @@ Below are the basic things to learn when playing around with vim.
 
 ## Deleting
 
-- `d` - Delete. Example: `yw` (delete word).
+- `d` - Delete. Example: `dw` (delete word).
 - `dd` - Delete the current line.
+- `D` - Delete the characters under the cursor until the end of the line.
 - `x` - Remove a character, forward.
 - `X` - Remove a character, backward.
 - `s` - Delete character under cursor and enter insert mode.
 - `S` - Delete line and begin insert at the beginning of same line.
+- `c` - Change. Example: `cw` (change word).
 - `ci<tags>` - Delete text "inside" __`{}[]()w<>t'"`__ and begin insert. Cursor should be within the tags/word.
 - `ca<tags>` - Delete text "aroud" including the closing tags __`{}[]()w<>t'"`__ and begin insert. Cursor should be within the tags/word.
 - `C` - Delete from cursor to end of line and begin insert.
