@@ -22,7 +22,8 @@ Below are the basic things to learn when playing around with vim.
 - __Visual Mode__
 	- `v` - Switch to visual mode.
 	- `v<w,e,b...>` - To select a word in visual mode and combine it with any commands.
-	- `V` - Switch to visual block mode.
+	- `V` - Switch to visual line mode.
+	- `Ctrl+v` - Switch to visual block mode.
 
 > __TIP__! Everything you do in vim (for the most part) follows this pattern: `[(n)um]<verb><n(o)un>` where most of the commands can accept number arguments to execute a command _nth_ times, for example: `3i<word>ESC` will insert the `word` 3 times on the current line, or if you wanted lines within range for example delete lines 1 to 3 we can just execute `:1,3d` then press ENTER, lines 1 to 3 will be deleted.
 
@@ -141,12 +142,35 @@ Below are the basic things to learn when playing around with vim.
 
 > __TIP__! The indentation commands can be executed as follows `<command>[n]<i|a><tag>` this pattern will execute the indentation command `i` inside or `a` around the given tag. For example: `=2a{` will re-indent 2 blocks (1st and second `{` blocks) or `=a{` which re-indents a block (including the braces).
 
+## Marking (Visual Mode)
+
+- `aw` - Mark a word.
+- `ab` - Mark a block with __`()`__.
+- `aB` - Mark a block with __`{}`__.
+- `ib` - Mark a block within __`()`__.
+- `iB` - Mark a block within __`{}`__.
+- `o` - Move to other end of marked area.
+- `O` - Move to other corner of block.
+
+## Visual Commands
+
+- `>` - Shift text right
+- `<` - Shift text left
+- `y` - Yank (copy) marked text
+- `d` - Delete marked text
+- `~` - Switch case
+
 ## Registers
 
-- `"<char><command>` - Registers the `<command>` result to register `<char>`, Example `"ayw` will yank a word and save it to register `a`.
+- `"<char><command>` - Registers the `<command>` result to register `<char>`, for example `"ayw` will yank a word and save it to register `a`.
 - `^r<register>` - Will access the `<register>` while on insert mode.
 
 ## Macros
+
+- `qa` - Record macro a
+- `q` - Stop recording macro
+- `@a` - Run macro a
+- `@@` - Rerun last run macro
 
 ## Misc. Commands
 
