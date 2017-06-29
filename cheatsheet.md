@@ -25,7 +25,7 @@ Below are the basic things to learn when playing around with vim.
 	- `V` - Switch to visual line mode.
 	- `Ctrl+v` - Switch to visual block mode.
 
-> __TIP__! Everything you do in vim (for the most part) follows this pattern: `[(n)um]<verb><n(o)un>` where most of the commands can accept number arguments to execute a command _nth_ times, for example: `3i<word>ESC` will insert the `word` 3 times on the current line, or if you wanted lines within range for example delete lines 1 to 3 we can just execute `:1,3d` then press ENTER, lines 1 to 3 will be deleted.
+> __TIP!__ Everything you do in vim (for the most part) follows this pattern: `[(n)um]<verb><n(o)un>` where most of the commands can accept number arguments to execute a command _nth_ times, for example: `3i<word>ESC` will insert the `word` 3 times on the current line, or if you wanted lines within range for example delete lines 1 to 3 we can just execute `:1,3d` then press ENTER, lines 1 to 3 will be deleted.
 
 ## Movements
 
@@ -96,6 +96,11 @@ Below are the basic things to learn when playing around with vim.
 
 - `y` - Yank. Example: `yw` (yank word).
 - `yy` - Yank the current line.
+- `y$` - yank to the end of the current line (but don't yank the newline character).
+- `yiw` - yank the current word (excluding surrounding whitespace).
+- `yaw` - yank the current word (including leading or trailing whitespace).
+- `ytx` - yank from the current cursor position up to and before the character (til x).
+- `yfx` - yank from the current cursor position up to and including the character (find x).
 - `p` - Paste after cursor.
 - `P` - Paste before cursor.
 
@@ -140,7 +145,7 @@ Below are the basic things to learn when playing around with vim.
 - `[n]<command>` - Indent _(nth)_ lines.
 - `:[start,end]<command>` Indent from line _(start)_ to line _(end)_.
 
-> __TIP__! The indentation commands can be executed as follows `<command>[n]<i|a><tag>` this pattern will execute the indentation command `i` inside or `a` around the given tag. For example: `=2a{` will re-indent 2 blocks (1st and second `{` blocks) or `=a{` which re-indents a block (including the braces).
+> __TIP!__ The indentation commands can be executed as follows `<command>[n]<i|a><tag>` this pattern will execute the indentation command `i` inside or `a` around the given tag. For example: `=2a{` will re-indent 2 blocks (1st and second `{` blocks) or `=a{` which re-indents a block (including the braces).
 
 ## Marking (Visual Mode)
 
