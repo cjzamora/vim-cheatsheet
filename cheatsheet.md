@@ -47,6 +47,15 @@ Below are the basic things to learn when playing around with vim.
 	- `M` - Move to the middle of the screen.
 	- `Ctrl+e` - Move the screen one line up.
 	- `Ctrl+y` - Move the screen one line down.
+- __Window Scroll__
+	- `Ctrl+E` - Scroll window _(nth)_ lines downwards in the buffer.
+	- `Ctrl+D` - Scroll window Downwards in the buffer.
+	- `Ctrl+F` - Scroll window _(nth)_ pages Forwards (downwards) in
+			the buffer.
+	- `Ctrl+Y` - Scroll window _(nth)_ lines upwards in the buffer.
+	- `Ctrl+U` - Scroll window Upwards in the buffer.
+	- `Ctrl+B` - Scroll window _(nth)_ pages Backwards (upwards) in the
+			buffer.
 - __Others__
 	- `0` - Move to the beginning of the line.
 	- `$` - Move to the end of the line.
